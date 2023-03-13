@@ -1,13 +1,5 @@
 pipeline {
-     agent {
-          docker {
-               image 'maven:3-jdk-11'
-               args '-p 33333:8090'
-          }
-     }
-     environment {
-          HOME = '.'
-     }
+     agent any
      stages {
           stage('Source') {
                steps {
